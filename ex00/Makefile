@@ -2,7 +2,7 @@ NAME := canoc
 CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -I.
 
-SRC := main.cpp
+SRC := main.cpp Fixed.cpp
 OBJ := $(SRC:.cpp=.o)
 
 HEADERS := Fixed.hpp
