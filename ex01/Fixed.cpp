@@ -38,15 +38,15 @@ int	Fixed::getRawBits(void) const {
 
 void Fixed::setRawBits(int const raw) {
 	std::cout << "setRawBits member function called" << std::endl;
-	this->_value = raw;
+	_value = raw;
 }
 
 float Fixed::toFloat(void) const {
-	return (static_cast<float> (this->_value) / (1 << _frac));
+	return (static_cast<float> (_value) / (1 << _frac));
 }
 
 int Fixed::toInt(void) const {
-	return (static_cast<float> (this->_value >> _frac));
+	return (static_cast<float> (_value >> _frac));
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed) {

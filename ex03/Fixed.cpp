@@ -32,7 +32,7 @@ int	Fixed::getRawBits(void) const {
 }
 
 void Fixed::setRawBits(int const raw) {
-	this->_value = raw;
+	_value = raw;
 }
 
 /*
@@ -52,27 +52,27 @@ int	Fixed::toInt(void) const {
  */
 
 bool	Fixed::operator>(const Fixed &other) const {
-	return (this->_value > other._value);
+	return (_value > other._value);
 }
 
 bool	Fixed::operator<(const Fixed &other) const {
-	return (this->_value < other._value);
+	return (_value < other._value);
 }
 
 bool	Fixed::operator>=(const Fixed &other) const {
-	return (this->_value >= other._value);
+	return (_value >= other._value);
 }
 
 bool	Fixed::operator<=(const Fixed &other) const {
-	return (this->_value <= other._value);
+	return (_value <= other._value);
 }
 
 bool	Fixed::operator==(const Fixed &other) const {
-	return (this->_value == other._value);
+	return (_value == other._value);
 }
 
 bool	Fixed::operator!=(const Fixed &other) const {
-	return (this->_value != other._value);
+	return (_value != other._value);
 }
 
 /*
@@ -82,28 +82,28 @@ bool	Fixed::operator!=(const Fixed &other) const {
 Fixed	Fixed::operator+(const Fixed &other) const {
 	Fixed res;
 
-	res.setRawBits(this->_value + other._value);
+	res.setRawBits(_value + other._value);
 	return (res);
 }
 
 Fixed	Fixed::operator-(const Fixed &other) const {
 	Fixed res;
 
-	res.setRawBits(this->_value - other._value);
+	res.setRawBits(_value - other._value);
 	return (res);
 }
 
 Fixed	Fixed::operator*(const Fixed &other) const {
 	Fixed res;
 
-	res.setRawBits((this->_value * other._value) >> _frac);
+	res.setRawBits((_value * other._value) >> _frac);
 	return (res);
 }
 
 Fixed	Fixed::operator/(const Fixed &other) const {
 	Fixed res;
 
-	res.setRawBits((this->_value << _frac) / other._value);
+	res.setRawBits((_value << _frac) / other._value);
 	return (res);
 }
 

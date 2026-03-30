@@ -2,10 +2,10 @@ NAME := bsp
 CC := c++
 CFLGAS := -Wall -Werror -Wextra -std=c++98 -I.
 
-SRC := main.cpp Fixed.cpp
+SRC := main.cpp Fixed.cpp Point.cpp
 OBJ := $(SRC:.cpp=.o)
 
-HEADERS := Fixed.hpp
+HEADERS := Fixed.hpp Point.hpp
 
 all: $(NAME)
 
