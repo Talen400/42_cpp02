@@ -40,11 +40,11 @@ void Fixed::setRawBits(int const raw) {
  */
 
 float Fixed::toFloat(void) const {
-	return (static_cast<float> (this->_value) / (1 << _frac));
+	return (static_cast<float> (_value) / (1 << _frac));
 }
 
 int	Fixed::toInt(void) const {
-	return (static_cast<float> (this->_value >> _frac));
+	return (static_cast<float> (_value >> _frac));
 }
 
 /*

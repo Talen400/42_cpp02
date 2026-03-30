@@ -11,3 +11,10 @@ Point	&Point::operator=(const Point &other) {
 
 Point::~Point() {};
 
+/*
+ * I/O stream
+ */
+
+std::ostream &operator<<(std::ostream &os, const Point &point) {
+	os << point.
+}
