@@ -1,5 +1,11 @@
 #include "Point.hpp"
 
 int	main(void) {
-	std::cout << "Hello, World!" << std::endl;
+	Point point;
+
+	std::cout << point;
+
+	Point point_with_numbers(5, 6);
+
+	std::cout << point_with_numbers;
 }

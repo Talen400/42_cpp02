@@ -11,10 +11,15 @@ Point	&Point::operator=(const Point &other) {
 
 Point::~Point() {};
 
-/*
- * I/O stream
- */
+Fixed	Point::getX(void) const {
+	return _x;
+}
 
-std::ostream &operator<<(std::ostream &os, const Point &point) {
-	os << point.
+Fixed	Point::getY(void) const { 
+	return _y;
+}
+
+std::ostream	&operator<<(std::ostream &os, const Point &point){
+	os << "(" << point.getX() << ", " << point.getY() << ")";
+	return os;
 }
