@@ -16,11 +16,16 @@ class Point
 		Point	&operator=(const Point &other);
 		~Point();
 
+<<<<<<< HEAD
 		Fixed	getX(void) const;
 		Fixed	getY(void) const;
 
 		Point	&operator+(const Fixed &other) const;
 		Point	&operator-(const Fixed &other) const;
+=======
+		const Fixed	&getX() const;
+		const Fixed	&getY() const;
+>>>>>>> 1e06592 (feat: adding the getters)
 };
 
 std::ostream	&operator<<(std::ostream &os, const Point &point);

@@ -11,6 +11,7 @@ Point	&Point::operator=(const Point &other) {
 
 Point::~Point() {};
 
+<<<<<<< HEAD
 Fixed	Point::getX(void) const {
 	return _x;
 }
@@ -20,6 +21,25 @@ Fixed	Point::getY(void) const {
 }
 
 std::ostream	&operator<<(std::ostream &os, const Point &point){
+=======
+/*
+ * getters
+ */
+
+const Fixed	&Point::getX() const {
+	return _x;
+}
+
+const Fixed	&Point::getY() const {
+	return _y;
+}
+
+/*
+ * I/O stream
+ */
+
+std::ostream &operator<<(std::ostream &os, const Point &point) {
+>>>>>>> 1e06592 (feat: adding the getters)
 	os << "(" << point.getX() << ", " << point.getY() << ")";
 	return os;
 }
